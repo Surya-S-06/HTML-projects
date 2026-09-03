@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Ticket Booking</title>
+</head>
+
+<body>
+
+    <h1 align="center">Movie Ticket Booking System</h1>
+
+    <form action="NewServlet" method="post">
+
+        <table align="center" cellpadding="10">
+
+            <tr>
+                <td colspan="2">
+                    <h2>Customer Details</h2>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="name">Customer Name:</label></td>
+                <td>
+                    <input type="text" id="name" name="name" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td>
+                    <input type="email" id="email" name="email" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="phone">Phone Number:</label></td>
+                <td>
+                    <input type="tel" id="phone" name="phone" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <h2>Movie Details</h2>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="movie">Select Movie:</label></td>
+                <td>
+                    <select id="movie" name="movie" required>
+                        <option value="">-- Select Movie --</option>
+                        <option value="Avatar">Avatar</option>
+                        <option value="Avengers">Avengers</option>
+                        <option value="Inception">Inception</option>
+                        <option value="Interstellar">Interstellar</option>
+                        <option value="Jurassic World">Jurassic World</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="theatre">Select Theatre:</label></td>
+                <td>
+                    <select id="theatre" name="theatre" required>
+                        <option value="">-- Select Theatre --</option>
+                        <option value="PVR Cinemas">PVR Cinemas</option>
+                        <option value="INOX">INOX</option>
+                        <option value="Cinepolis">Cinepolis</option>
+                        <option value="IMAX">IMAX</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="date">Movie Date:</label></td>
+                <td>
+                    <input type="date" id="date" name="date" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="show">Show Time:</label></td>
+                <td>
+                    <select id="show" name="show" required>
+                        <option value="">-- Select Show --</option>
+                        <option value="10:00 AM">10:00 AM</option>
+                        <option value="1:00 PM">1:00 PM</option>
+                        <option value="4:00 PM">4:00 PM</option>
+                        <option value="7:00 PM">7:00 PM</option>
+                        <option value="10:00 PM">10:00 PM</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <h2>Ticket Details</h2>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="tickets">Number of Tickets:</label></td>
+                <td>
+                    <input type="number"
+                           id="tickets"
+                           name="tickets"
+                           min="1"
+                           max="10"
+                           value="1"
+                           required>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Book Ticket">
+                    &nbsp;&nbsp;
+                    <input type="reset" value="Clear">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
