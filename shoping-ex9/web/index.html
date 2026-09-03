@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ELECTRONICS SHOPPING STORE</title>
+<script>
+function dragstartHandler(e){e.dataTransfer.setData("text",e.target.id);}
+function dragoverHandler(e){e.preventDefault();}
+function dropHandler(e){
+e.preventDefault();
+var d=e.dataTransfer.getData("text");
+var c=document.getElementById(d).cloneNode(true);
+c.width=80;
+c.height=80;
+c.draggable=false;
+c.style.margin="5px";
+e.target.appendChild(c);
+}
+</script>
+</head>
+<body>
+<center>
+<h1>ELECTRONICS SHOPPING STORE</h1>
+<img src="banner.webp" width="100%" height="650">
+<br><br>
+<table border="1" width="100%">
+<tr align="center">
+<td>
+<a href="#laptop">
+<img src="l1.webp" width="300" height="180">
+<br>
+<b>LAPTOPS</b>
+</a>
+</td>
+<td>
+<a href="#peripheral">
+<img src="l4.webp" width="300" height="180">
+<br>
+<b>COMPUTER PERIPHERALS</b>
+</a>
+</td>
+<td>
+<a href="#mobile">
+<img src="l7.webp" width="300" height="180">
+<br>
+<b>MOBILE ACCESSORIES</b>
+</a>
+</td>
+</tr>
+</table>
+</center>
+<hr>
+<h2 id="laptop" align="center">LAPTOPS</h2>
+<table border="1" width="100%">
+<tr align="center">
+<td>
+
+<h3>LOQ</h3>
+
+<img src="l1.webp"
+id="l1"
+width="180"
+height="180"
+draggable="true"
+ondragstart="dragstartHandler(event)">
+
+<br><br>
+
+<video width="180" controls>
+<source src="video.mp4">
+</video>
+
+</td>
+
+<td>
+
+<h3>Victus</h3>
+
+<img src="l2.webp"
+id="l2"
+width="180"
+height="180"
+draggable="true"
+ondragstart="dragstartHandler(event)">
+
+<br><br>
+
+<video width="180" controls>
+<source src="video.mp4">
+</video>
+
+</td>
+
+<td>
+
+<h3>ASUS TUF</h3>
+
+<img src="l3.webp"
+id="l3"
+width="180"
+height="180"
+draggable="true"
+ondragstart="dragstartHandler(event)">
+
+<br><br>
+
+<video width="180" controls>
+<source src="video.mp4">
+</video>
+
+</td>
+
+</tr>
+</table>
+
+<hr>
+
+<h2 id="peripheral" align="center">COMPUTER PERIPHERALS</h2>
+
+<table border="1" width="100%">
+<tr align="center">
+
+<td>
+
+<h3>Keyboard</h3>
+
+<img src="l4.webp"
+id="l4"
+width="180"
+height="180"
+draggable="true"
+ondragstart="dragstartHandler(event)">
+
+<br><br>
+
+<video width="180" controls>
+<source src="video.mp4">
+</video>
+
+</td>
+
+<td>
+
+<h3>Mouse</h3>
+
+<img src="l5.webp"
+id="l5"
+width="180"
+height="180"
+draggable="true"
+ondragstart="dragstartHandler(event)">
+
+<br><br>
+
+<video width="180" controls>
+<source src="video.mp4">
+</video>
+
+</td>
+
+<td>
+
+<h3>Monitor</h3>
+
+<img src="l6.webp"
+id="l6"
+width="180"
+height="180"
+draggable="true"
+ondragstart="dragstartHandler(event)">
+
+<br><br>
+
+<video width="180" controls>
+<source src="video.mp4">
+</video>
+
+</td>
+
+</tr>
+</table>
+
+<hr>
+<h2 id="mobile" align="center">MOBILE ACCESSORIES</h2>
+
+<table border="1" width="100%">
+<tr align="center">
+
+<td>
+<h3>Headset</h3>
+<img src="l7.webp"
+id="l7"
+width="180"
+height="180"
+draggable="true"
+ondragstart="dragstartHandler(event)">
+<br><br>
+<video width="180" controls>
+<source src="video.mp4">
+</video>
+</td>
+
+<td>
+<h3>Power Bank</h3>
+<img src="l8.webp"
+id="l8"
+width="180"
+height="180"
+draggable="true"
+ondragstart="dragstartHandler(event)">
+<br><br>
+<video width="180" controls>
+<source src="video.mp4">
+</video>
+</td>
+
+<td>
+<h3>Charger</h3>
+<img src="l9.webp"
+id="l9"
+width="180"
+height="180"
+draggable="true"
+ondragstart="dragstartHandler(event)">
+<br><br>
+<video width="180" controls>
+<source src="video.mp4">
+</video>
+</td>
+
+</tr>
+</table>
+
+<hr>
+<table border="1" width="100%">
+<tr>
+<td width="50%" align="center">
+
+<h2>SHOPPING CART</h2>
+<div
+ondrop="dropHandler(event)"
+ondragover="dragoverHandler(event)"
+style="width:400px;height:350px;border:3px solid black;overflow:auto;padding:10px;">
+<b>Drag Products Here</b>
+<hr>
+</div>
+</td>
+<td width="50%" align="center">
+<h2>BUY PRODUCT</h2>
+<form action="display.jsp" method="post">
+Name<br>
+<input type="text" name="name" required><br><br>
+Email<br>
+<input type="email" name="email" required><br><br>
+Phone<br>
+<input type="tel" name="phone"><br><br>
+Product<br>
+<select name="product" required>
+    <option value="Laptops">Laptops</option>
+    <option value="Computer Peripherals">Computer Peripherals</option>
+    <option value="Mobile Accessories">Mobile Accessories</option>
+</select>
+<br><br>
+Quantity<br>
+<input type="number" name="quantity" min="1" required><br><br>
+Address<br>
+<textarea name="address" rows="4" cols="22"></textarea>
+<br><br>
+Payment<br>
+<input type="radio" name="payment" value="Cash" required>
+Cash
+<input type="radio" name="payment" value="UPI">
+UPI
+<br><br>
+<input type="submit" value="Buy Now">
+<input type="reset" value="Clear">
+</form>
+</td>
+</tr>
+</table>
+<br>
+<center>
+<a href="https://maps.google.com" target="_blank">
+<button>Get Store Location</button>
+</a>
+</center>
+<hr>
+</body>
+</html>
+
