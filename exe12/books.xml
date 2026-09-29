@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+
+    <book>
+        <title>The Jungle Book</title>
+        <author>F . scott fitzgerald</author>
+        <year>1894</year>
+        <price>300</price>
+    </book>
+
+    <book>
+        <title>Alice in Wonderland</title>
+        <author>F . scott fitzgerald</author>
+        <year>1865</year>
+        <price>350</price>
+    </book>
+
+    <book>
+        <title>The great gatsby</title>
+        <author>CF . scott fitzgerald</author>
+        <year>1838</year>
+        <price>400</price>
+    </book>
+
+</root>
